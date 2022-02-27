@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Shippori+Antique+B1&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 8px;
+}
+
+body {
+    margin: 0;
+    background-color: #fff7d1;
+    font-size: 25px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+header {
+    height: 140px;
+    background-color: #337700;
+    border-color: black;
+    border-bottom: 4px;
+    position: fixed;
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 30px;
+    font-size: 20px;
+    
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+}
+
+.page-container {
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+main {
+    margin: 10px 10% 60px 220px;
+    padding: 0px 25px;
+}
+
+aside {
+    width: 190px;
+    margin-top: 30px;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(to bottom, #000000, #000000);
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+aside a {
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 35px;
+
+}
+
+.logo {
+    margin-left: 5px;
+    font-size: 26px;
+}
+
+p {
+    line-height: 170%;
+    border-left: 6px solid #ff533d;
+    padding-left: 12px;
+}
+
+.row {
+    overflow: auto;
+}
+
+[class^="col-"] {
+    float: left;
+    padding: 5px;
+}
+
+.col-10 {width: 10%;}
+.col-20 {width: 20%;}
+.col-30 {width: 30%;}
+.col-40 {width: 40%;}
+.col-50 {width: 150%; height: 150%;}
+.col-60 {width: 60%;}
+.col-70 {width: 70%;}
+.col-80 {width: 80%;}
+.col-90 {width: 90%;}
+.col-100 {width: 100%;}
+
+
+.title {
+    border-bottom: 4px solid #ff533d;
+    margin-bottom: 5px;
+    margin-top: 100px;
+    display: inline-block;
+}
+
+.intro-video {
+    display: block;
+    max-height: 50vh;
+    margin: 40px auto;
+    max-width: 100%;
+    border-radius: 8px;
+    
+}
+
+.intro-video {
+    display: block;
+    max-height: 50vh;
+    margin: 40px auto;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+.row-event {
+    margin-top: 15px;
+}
+
+.event {
+    padding: 0px 15px 15px 15px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    border: 1px solid #ff533d;
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.centered {
+    text-align: center;
+}
+
+
+
+
+.header-yolka {
+    background: url(https://for-web.ru/uploads/yolka.png) repeat-x;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 34px;
+    position: fixed;
+}
+
+
+.show {
+    display: block !important;
+}
+
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+
+  .main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    /* Для выравнивания меню по центру
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    */
+}
+.main-menu > li {
+    display: inline-flex;
+}
+.main-menu > li + li {
+    margin-left: 20px;
+}
+.main-menu > li > a {
+    padding: 0 0 20px 0;
+    position: relative;
+    text-transform: uppercase;   
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    font-size: 15px;
+    text-decoration: none;   
+}
+.main-menu > li > a:hover {
+    text-decoration: none;   
+    color: #337AB7;
+}
+.main-menu > li > a:after {
+    width: 0;
+    height: 3px;
+    background-color: #337AB7;
+    content: '';
+    left: 0;
+    bottom: 10px;
+    position: relative;
+    transition: all .3s;
+}
+.main-menu > li > a:hover::after {
+    width: 100%;
+}
+.main-menu > li.active a:after {
+    width: 100%;
+}
+.main-menu li {
+    margin: 0;
+    white-space: nowrap;
+}
+.main-menu li.menu-children {
+    position: fixed;
+    margin-right: 12px;
+}
+.main-menu li.menu-children:after {
+    position: fixed;
+    content: "\2039";
+    color: #337AB7;
+    font-size: 20px;
+    font-weight: bold;
+    right: -12px;
+    top: -2px;
+    transform: rotate(-90deg);
+}
+.main-menu li li.menu-children:after {
+    position: fixed;
+    content: "\2039";
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    right: 10px;
+    top: 12px;
+    transform: rotate(180deg);
+}
+.main-menu li.menu-children:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.main-menu ul {
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    background-color: #337AB7;
+    position: fixed;
+    z-index: 20;
+    min-width: 220px;
+    top: 100%;
+    left: -30px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 200ms cubic-bezier(0.43, 0.59, 0.16, 1.25);
+}
+.main-menu ul li {
+    display: block;
+    padding: 0 10px;
+    line-height: 1.1;
+}
+.main-menu ul li:last-child {
+    margin-bottom: 0;
+}
+.main-menu ul li a {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    transition: all .3s;
+    text-decoration: none;   
+}
+.main-menu ul li a:hover {
+    color: #337AB7;
+    background: #FFF;
+    text-decoration: none;   
+}
+.main-menu ul ul {
+    top: 0;
+    left: 100%;
+}
+  
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    [class^="col-"] {
+        width: 100%;
+        
+    }
+
+    main {
+        margin: 0px;
+        padding: 10px 15px 20px 15px;
+
+    }
+
+    aside {
+        display: none;
+        height: auto;
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 25px;
+
+    }
+
+    .gallery img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .menu {
+        display: none;
+        position: fixed;
+    }
+
+   
+
+}
